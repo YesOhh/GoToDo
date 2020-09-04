@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 此处的 . 就是传入引用的子模板的变量 -->
+    {{template "header" .}}
+</head>
+<body>
+{{template "nav" .}}
+<main>
+    {{template "add"}}
+
+    <form action="/operation/finish" method="post">
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-md-10">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary active" id="todo-tab" data-toggle="tab" href="#todo" role="tab" aria-controls="todo" aria-selected="true">待做清单</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" id="finished-tab" data-toggle="tab" href="#finished" role="tab" aria-controls="finished" aria-selected="false">已完成</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <input class="float-right btn btn-secondary" name="submit" type="submit" value="完成">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <div class="tab-content mt-4"  id="myTabContent">
+                        <div class="tab-pane fade show active" id="todo" role="tabpanel" aria-labelledby="todo-tab">
+                            {{range .messageList}}
+                                <label class="card-body shadow container-fluid my-2">
+                                    <strong class="card-text"><input type="checkbox" autocomplete="off" aria-label="checkbox" value={{.Id}} name="todo">  {{.Message}}</strong>
+                                </label>
+                            {{else}}
+                                <h4>没有代办事情噢</h4>
+                            {{end}}
+                        </div>
+                        <div class="tab-pane fade" id="finished" role="tabpanel" aria-labelledby="finished-tab">
+                            {{if .partFinishedInfo}}
+                            <table class="table table-borderless">
+                                <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">事项</th>
+                                    <th scope="col">创建时间</th>
+                                    <th scope="col">完成时间</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{range .partFinishedInfo}}
+                                <tr>
+                                    <th scope="row"><span class="badge badge-success">&radic;</span></th>
+                                    <td>{{.Message}}</td>
+                                    <td>{{.CreateTime}}</td>
+                                    <td>{{.FinishedTime}}</td>
+                                </tr>
+                                {{end}}
+                                </tbody>
+                            </table>
+                            {{else}}
+                                <h4>没有完成的事情噢</h4>
+                            {{end}}
+                            {{if .partFinishedInfo}}
+                                <button type="button" class="float-left btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
+                                    清空完成数据
+                                </button>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title" id="exampleModalLabel">清空完成数据</h6>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <strong>清空数据后不可恢复</strong>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                                                <a href="/operation/clear" class="btn btn-danger">确定</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/finished" class="float-right btn btn-secondary">查看全部数据</a>
+                            {{end}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="container mt-5">
+        <hr>
+        {{template "footer"}}
+    </div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{{define "add"}}
+    <form action="/operation/add" method="post" class="container input-group my-5" role="form" id="top">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">想做什么？</span>
+        </div>
+        <input class="form-control" name="message" required type="text" placeholder="记下来" aria-label="write-down">
+        <input class="float-right btn btn-secondary" name="submit" type="submit" value="新增">
+    </form>
+{{end}}

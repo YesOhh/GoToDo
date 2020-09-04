@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 此处的 . 就是传入引用的子模板的变量 -->
+    {{template "header" .}}
+</head>
+<body>
+{{template "nav"}}
+<main>
+    <div class="container">
+        <header>
+            <h1 class="text-center text-secondary mt-3">登录</h1>
+        </header>
+        {{template "flash" .}}
+        <div class="row justify-content-md-center">
+            <div class="col-md-6 mt-2">
+                <form action="/login" method="post" class="form" role="form">
+                    <div class="form-group required">
+                        <label class="form-control-label" for="username">用户名</label>
+                        <input class="form-control" name="username" required type="text" placeholder="">
+                    </div>
+                    <div class="form-group required">
+                        <label class="form-control-label" for="password">密码</label>
+                        <input class="form-control" name="password" required type="password">
+                    </div>
+                    <input class="btn btn-secondary" name="submit" type="submit" value="登录">
+                </form>
+{{/*                <a class="float-right text-secondary" href="#">忘记密码</a>*/}}
+            </div>
+        </div>
+        <hr class="mt-5">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <div class="d-flex justify-content-end">
+                    <a class="btn btn-success" href="/register">注册账户</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

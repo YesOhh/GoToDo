@@ -1,0 +1,50 @@
+{{define "nav"}}
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only"></span>
+        </div>
+        <div class="spinner-border text-secondary" role="status">
+            <span class="sr-only"></span>
+        </div>
+        <div class="spinner-border text-success" role="status">
+            <span class="sr-only"></span>
+        </div>
+        <div class="spinner-border text-danger" role="status">
+            <span class="sr-only"></span>
+        </div>
+        <div class="spinner-border text-warning" role="status">
+            <span class="sr-only"></span>
+        </div>
+        <div class="spinner-border text-info" role="status">
+            <span class="sr-only"></span>
+        </div>
+        <div class="spinner-border text-dark" role="status">
+            <span class="sr-only"></span>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <div class="navbar-nav mb-0 h5">
+                <a class="nav-link ml-2" href="/">主页</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                {{if .username}}
+                    <div class="dropdown nav-item">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span>{{.username}}</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" role="menu">
+                            <h6 class="dropdown-header">Hello<strong> {{.username}}</strong></h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/logout">登出</a>
+                        </div>
+                    </div>
+                {{end}}
+            </div>
+        </div>
+    </div>
+</nav>
+{{end}}

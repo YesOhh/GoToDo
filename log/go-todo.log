@@ -1,0 +1,604 @@
+[go-todo]2020/09/01 15:50:52 recovery.go:13: 发生错误: reflect: reflect.flag.mustBeAssignable using unaddressable value
+[go-todo]2020/09/01 15:54:17 recovery.go:13: 发生错误: reflect: reflect.flag.mustBeAssignable using unaddressable value
+[go-todo]2020/09/01 15:55:13 manage.go:20: current authenticated:  <nil>
+[go-todo]2020/09/01 15:59:40 recovery.go:13: 发生错误: reflect: reflect.flag.mustBeAssignable using unaddressable value
+[go-todo]2020/09/01 16:04:48 manage.go:20: current authenticated:  <nil>
+[go-todo]2020/09/01 16:07:37 auth.go:71: 正则匹配出错: <nil>
+[go-todo]2020/09/01 16:07:37 recovery.go:13: 发生错误: 正则匹配出错: <nil>
+
+[go-todo]2020/09/01 16:09:36 manage.go:20: current authenticated:  <nil>
+[go-todo]2020/09/01 16:09:51 auth.go:72: 正则匹配出错: <nil>
+[go-todo]2020/09/01 16:09:51 recovery.go:13: 发生错误: 正则匹配出错: <nil>
+
+[go-todo]2020/09/01 16:10:54 manage.go:20: current authenticated:  <nil>
+[go-todo]2020/09/01 16:18:10 auth.go:100: 注册成功，id为：1
+[go-todo]2020/09/01 16:18:10 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 16:18:41 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 16:27:03 manage.go:20: current authenticated:  <nil>
+[go-todo]2020/09/01 16:28:26 manage.go:20: current authenticated:  <nil>
+[go-todo]2020/09/01 16:31:05 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 16:31:26 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 16:31:26 auth.go:118: YesOhh log out, current authenticated: %!s(<nil>)
+[go-todo]2020/09/01 16:35:07 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 16:35:31 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 16:35:31 auth.go:118: YesOhh log out, current authenticated: %!s(<nil>)
+[go-todo]2020/09/01 16:37:53 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 16:39:00 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 16:39:00 auth.go:124: YesOhh log out, current authenticated: %!s(<nil>)
+[go-todo]2020/09/01 16:39:17 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 16:45:58 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 16:45:58 auth.go:117: YesOhh log out, current authenticated: %!s(<nil>)
+[go-todo]2020/09/01 16:46:11 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 17:59:13 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 17:59:46 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:01:23 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:01:51 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:02:23 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:02:51 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:03:42 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:08:31 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:08:40 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:09:06 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:09:23 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:09:34 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:10:27 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:12:05 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:12:29 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:12:37 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:12:48 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:13:01 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:13:07 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:13:34 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:13:53 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:14:12 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:14:56 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:15:12 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:15:23 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:15:31 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:15:41 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:15:54 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:16:14 manage.go:20: current authenticated:  true
+[go-todo]2020/09/01 18:16:26 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:23:55 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:24:09 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:24:33 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:24:50 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:25:25 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:26:03 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:26:13 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:29:17 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:29:47 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:31:04 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:31:15 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:31:31 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:31:56 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:32:35 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:32:51 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:33:17 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:33:42 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:34:05 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:34:12 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:34:21 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:35:16 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:35:29 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:36:09 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:36:27 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:36:32 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:36:42 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:37:50 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:38:09 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:38:21 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:39:31 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:39:57 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:40:45 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:43:57 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:44:31 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:45:19 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:45:26 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:45:55 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:46:09 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:46:26 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:46:52 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:47:27 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:47:44 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:48:27 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:49:27 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:49:32 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:51:11 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:55:54 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:56:17 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 09:56:39 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:01:42 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:01:57 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:02:06 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:02:12 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:24:43 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:24:47 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:25:56 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:25:56 core.go:27: YesOhh 新增 id 为 1 的待办事宜
+[go-todo]2020/09/02 10:25:56 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:30:34 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:30:56 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:31:24 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:31:32 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:35:26 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:36:40 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:36:57 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:37:40 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:37:52 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:38:03 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:38:35 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:38:46 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:39:02 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:40:10 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:40:36 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:41:11 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:41:40 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:42:07 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:42:07 core.go:27: YesOhh 新增 id 为 2 的待办事宜
+[go-todo]2020/09/02 10:42:07 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:42:33 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:44:23 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:44:43 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:44:58 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:45:07 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:45:21 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:45:26 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:45:38 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:46:35 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:46:46 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:46:52 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:47:50 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:48:05 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:48:14 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:48:25 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:48:39 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:49:07 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:49:17 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:50:42 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:50:55 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 10:51:15 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:02:40 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:02:48 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:05:16 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:05:23 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:05:31 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:07:05 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:07:25 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:07:49 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:07:51 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:07:54 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:08:09 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:08:41 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:09:02 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:09:13 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:09:24 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:10:08 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:10:25 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:10:56 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:15:50 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:17:28 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:17:49 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:18:01 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:18:09 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:21:45 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:29:18 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 11:40:31 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:01:18 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:01:18 recovery.go:13: 发生错误: assignment to entry in nil map
+[go-todo]2020/09/02 14:04:12 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:04:12 recovery.go:13: 发生错误: assignment to entry in nil map
+[go-todo]2020/09/02 14:08:20 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:08:55 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:17:24 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:17:47 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:19:13 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:19:55 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:20:15 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:20:27 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:22:06 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:22:21 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:22:42 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:24:39 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:24:55 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:25:20 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:25:30 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:29:18 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:29:22 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:29:24 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:30:32 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:30:36 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:30:36 core.go:33: []
+[go-todo]2020/09/02 14:30:36 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:30:43 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:30:43 core.go:33: []
+[go-todo]2020/09/02 14:30:43 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:34:54 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:35:12 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:35:12 core.go:33: []
+[go-todo]2020/09/02 14:35:12 core.go:34: []
+[go-todo]2020/09/02 14:35:12 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:35:31 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:35:31 core.go:33: []
+[go-todo]2020/09/02 14:35:31 core.go:34: []
+[go-todo]2020/09/02 14:35:31 manage.go:20: current authenticated:  true
+[go-todo]2020/09/02 14:38:18 core.go:33: []
+[go-todo]2020/09/02 14:38:18 core.go:34: map[submit:[完成]]
+[go-todo]2020/09/02 14:40:15 core.go:33: []
+[go-todo]2020/09/02 14:40:15 core.go:34: map[submit:[完成]]
+[go-todo]2020/09/02 14:41:22 core.go:33: []
+[go-todo]2020/09/02 14:41:22 core.go:34: map[submit:[完成]]
+[go-todo]2020/09/02 14:49:42 core.go:33: [1 2]
+[go-todo]2020/09/02 14:49:42 core.go:34: map[submit:[完成] todo:[1 2]]
+[go-todo]2020/09/02 14:50:15 core.go:33: []
+[go-todo]2020/09/02 14:50:15 core.go:34: map[submit:[完成]]
+[go-todo]2020/09/02 15:00:27 core.go:33: [1 2]
+[go-todo]2020/09/02 15:00:27 core.go:34: map[submit:[完成] todo:[1 2]]
+[go-todo]2020/09/02 15:34:29 message.go:94: 标记完成事宜出错: near "finished_time": syntax error
+[go-todo]2020/09/02 15:34:29 recovery.go:13: 发生错误: 标记完成事宜出错: near "finished_time": syntax error
+
+[go-todo]2020/09/02 15:38:14 core.go:38: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 16:13:18 core.go:38: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 16:13:47 core.go:28: YesOhh 新增 id 为 3 的待办事宜
+[go-todo]2020/09/02 16:43:02 core.go:28: YesOhh 新增 id 为 4 的待办事宜
+[go-todo]2020/09/02 16:43:40 core.go:28: YesOhh 新增 id 为 5 的待办事宜
+[go-todo]2020/09/02 16:49:45 core.go:38: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 16:50:58 recovery.go:13: 发生错误: Key "csrfSecret" does not exist
+[go-todo]2020/09/02 16:51:15 recovery.go:13: 发生错误: Key "csrfSecret" does not exist
+[go-todo]2020/09/02 16:51:17 recovery.go:13: 发生错误: Key "csrfSecret" does not exist
+[go-todo]2020/09/02 16:51:49 recovery.go:13: 发生错误: Key "csrfSecret" does not exist
+[go-todo]2020/09/02 16:55:36 recovery.go:13: 发生错误: Key "csrfSecret" does not exist
+[go-todo]2020/09/02 16:55:55 recovery.go:13: 发生错误: Key "csrfSecret" does not exist
+[go-todo]2020/09/02 16:58:01 core.go:43: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 16:58:08 core.go:43: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 16:58:46 core.go:32: YesOhh 新增 id 为 6 的待办事宜
+[go-todo]2020/09/02 16:59:05 core.go:32: YesOhh 新增 id 为 7 的待办事宜
+[go-todo]2020/09/02 16:59:51 core.go:32: YesOhh 新增 id 为 8 的待办事宜
+[go-todo]2020/09/02 17:04:33 core.go:32: YesOhh 新增 id 为 9 的待办事宜
+[go-todo]2020/09/02 17:05:09 core.go:32: YesOhh 新增 id 为 10 的待办事宜
+[go-todo]2020/09/02 17:06:59 core.go:32: YesOhh 新增 id 为 11 的待办事宜
+[go-todo]2020/09/02 17:11:00 core.go:33: YesOhh 新增 id 为 12 的待办事宜
+[go-todo]2020/09/02 17:27:48 recovery.go:13: 发生错误: Key "csrfSecret" does not exist
+[go-todo]2020/09/02 17:28:41 core.go:38: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 17:28:46 core.go:38: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 17:28:49 core.go:28: YesOhh 新增 id 为 13 的待办事宜
+[go-todo]2020/09/02 17:29:57 core.go:28: YesOhh 新增 id 为 14 的待办事宜
+[go-todo]2020/09/02 17:30:01 core.go:38: 0 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 17:30:08 core.go:38: 0 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 17:31:05 core.go:38: 0 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 17:43:18 core.go:38: 0 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 17:44:38 core.go:38: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 17:50:49 core.go:38: 0 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 17:50:58 core.go:38: 0 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 17:54:17 core.go:38: 0 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 17:54:27 core.go:38: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 18:00:53 core.go:38: 2 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 18:01:51 core.go:28: YesOhh 新增 id 为 15 的待办事宜
+[go-todo]2020/09/02 18:01:54 core.go:28: YesOhh 新增 id 为 16 的待办事宜
+[go-todo]2020/09/02 18:01:57 core.go:28: YesOhh 新增 id 为 17 的待办事宜
+[go-todo]2020/09/02 18:02:00 core.go:38: 3 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 18:02:56 core.go:28: YesOhh 新增 id 为 18 的待办事宜
+[go-todo]2020/09/02 18:02:59 core.go:28: YesOhh 新增 id 为 19 的待办事宜
+[go-todo]2020/09/02 18:03:04 core.go:38: 2 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/02 18:16:09 core.go:28: YesOhh 新增 id 为 20 的待办事宜
+[go-todo]2020/09/02 18:16:29 core.go:28: YesOhh 新增 id 为 21 的待办事宜
+[go-todo]2020/09/02 18:16:41 core.go:28: YesOhh 新增 id 为 22 的待办事宜
+[go-todo]2020/09/02 18:16:56 core.go:28: YesOhh 新增 id 为 23 的待办事宜
+[go-todo]2020/09/03 08:34:05 core.go:38: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/03 10:06:30 core.go:28: YesOhh 新增 id 为 24 的待办事宜
+[go-todo]2020/09/03 10:08:58 core.go:38: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/03 10:09:01 core.go:38: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/03 10:09:42 core.go:28: YesOhh 新增 id 为 25 的待办事宜
+[go-todo]2020/09/03 11:06:43 core.go:39: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/03 14:56:28 core.go:55: 方向是: 
+[go-todo]2020/09/03 14:56:33 core.go:55: 方向是: next
+[go-todo]2020/09/03 14:56:40 core.go:55: 方向是: 上一页
+[go-todo]2020/09/03 14:57:09 core.go:55: 方向是: 
+[go-todo]2020/09/03 14:57:15 core.go:55: 方向是: 
+[go-todo]2020/09/03 14:57:22 core.go:55: 方向是: 
+[go-todo]2020/09/03 14:57:32 core.go:55: 方向是: 
+[go-todo]2020/09/03 14:57:34 core.go:55: 方向是: next
+[go-todo]2020/09/03 15:15:17 core.go:30: YesOhh 新增 id 为 26 的待办事宜
+[go-todo]2020/09/03 15:31:46 core.go:40: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/03 15:40:43 core.go:40: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/03 16:11:45 recovery.go:13: 发生错误: interface conversion: interface {} is nil, not string
+[go-todo]2020/09/03 16:34:55 recovery.go:13: 发生错误: interface conversion: interface {} is nil, not string
+[go-todo]2020/09/03 16:34:58 recovery.go:13: 发生错误: interface conversion: interface {} is nil, not string
+[go-todo]2020/09/03 16:36:17 recovery.go:13: 发生错误: interface conversion: interface {} is nil, not string
+[go-todo]2020/09/03 16:36:47 recovery.go:13: 发生错误: interface conversion: interface {} is nil, not string
+[go-todo]2020/09/03 16:37:04 recovery.go:13: 发生错误: interface conversion: interface {} is nil, not string
+[go-todo]2020/09/03 16:44:35 recovery.go:13: 发生错误: interface conversion: interface {} is nil, not string
+[go-todo]2020/09/03 16:50:49 recovery.go:17: 发生错误: interface conversion: interface {} is nil, not string
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Go/src/runtime/iface.go:260
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:31
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/03 16:55:22 manage.go:20: / current authenticated: true
+[go-todo]2020/09/03 16:55:27 manage.go:20: / current authenticated: true
+[go-todo]2020/09/03 16:55:31 manage.go:20: / current authenticated: true
+[go-todo]2020/09/03 16:55:39 manage.go:20: / current authenticated: true
+[go-todo]2020/09/03 16:55:46 manage.go:20: / current authenticated: true
+[go-todo]2020/09/03 16:55:49 manage.go:20: / current authenticated: true
+[go-todo]2020/09/03 16:55:57 manage.go:20: / current authenticated: %!t(<nil>)
+[go-todo]2020/09/03 16:55:57 recovery.go:17: 发生错误: interface conversion: interface {} is nil, not string
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Go/src/runtime/iface.go:260
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:31
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/03 16:57:23 manage.go:20: / current authenticated: true
+[go-todo]2020/09/03 16:57:35 manage.go:20: / current authenticated: true
+[go-todo]2020/09/03 17:00:30 manage.go:20: / current authenticated: %!t(<nil>)
+[go-todo]2020/09/03 17:00:30 recovery.go:17: 发生错误: interface conversion: interface {} is nil, not string
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Go/src/runtime/iface.go:260
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:31
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/03 17:01:59 manage.go:25: / current authenticated: true
+[go-todo]2020/09/03 17:02:19 manage.go:25: / current authenticated: true
+[go-todo]2020/09/03 17:02:26 manage.go:25: / current authenticated: true
+[go-todo]2020/09/03 17:03:45 manage.go:22: / not authenticated: %!t(<nil>)
+[go-todo]2020/09/03 17:03:45 recovery.go:17: 发生错误: interface conversion: interface {} is nil, not string
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Go/src/runtime/iface.go:260
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:31
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/03 17:06:26 manage.go:26: / current authenticated: true
+[go-todo]2020/09/03 17:06:35 manage.go:26: / current authenticated: true
+[go-todo]2020/09/03 17:06:42 manage.go:26: / current authenticated: true
+[go-todo]2020/09/03 17:06:49 manage.go:26: / current authenticated: true
+[go-todo]2020/09/03 17:06:56 manage.go:22: / not authenticated: %!t(<nil>)
+[go-todo]2020/09/03 17:06:56 recovery.go:17: 发生错误: interface conversion: interface {} is nil, not string
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Go/src/runtime/iface.go:260
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:32
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/03 17:11:07 recovery.go:17: 发生错误: interface conversion: interface {} is nil, not string
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Go/src/runtime/iface.go:260
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/03 17:17:23 recovery.go:17: 发生错误: interface conversion: interface {} is nil, not string
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Go/src/runtime/iface.go:260
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:16
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/manage.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/03 17:22:17 recovery.go:17: 发生错误: interface conversion: interface {} is nil, not string
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Go/src/runtime/iface.go:260
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:39
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/manage.go:23
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/03 17:22:36 recovery.go:17: 发生错误: interface conversion: interface {} is nil, not string
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Go/src/runtime/iface.go:260
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:16
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/manage.go:23
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/03 17:26:29 recovery.go:17: 发生错误: interface conversion: interface {} is nil, not string
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Go/src/runtime/iface.go:260
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:16
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/03 17:28:59 recovery.go:17: 发生错误: interface conversion: interface {} is nil, not string
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Go/src/runtime/iface.go:260
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:16
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/manage.go:18
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/03 17:29:06 recovery.go:17: 发生错误: interface conversion: interface {} is nil, not string
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Go/src/runtime/iface.go:260
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:16
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/manage.go:18
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/03 18:10:19 message.go:136: 已删除YesOhh的全部完成事宜
+[go-todo]2020/09/03 18:11:08 core.go:30: YesOhh 新增 id 为 27 的待办事宜
+[go-todo]2020/09/03 18:11:16 core.go:30: YesOhh 新增 id 为 28 的待办事宜
+[go-todo]2020/09/03 18:11:19 core.go:40: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/04 08:38:32 message.go:136: 已删除YesOhh的全部完成事宜
+[go-todo]2020/09/04 08:38:44 core.go:40: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/04 08:38:48 message.go:136: 已删除YesOhh的全部完成事宜
+[go-todo]2020/09/04 08:39:07 core.go:30: YesOhh 新增 id 为 29 的待办事宜
+[go-todo]2020/09/04 10:06:21 recovery.go:17: 发生错误: open templates\core.tmpl~: The system cannot find the file specified.
+Traceback:
+	C:/Go/src/runtime/panic.go:969
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/render/html.go:76
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/render/html.go:74
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/render/html.go:61
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:850
+	C:/Users/yangxu/go/src/goTodo/controller/core.go:23
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/manage.go:27
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/src/goTodo/middleware/recovery.go:25
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-contrib/sessions@v0.0.3/sessions.go:53
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:84
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/logger.go:244
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:162
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:410
+	C:/Users/yangxu/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:369
+	C:/Go/src/net/http/server.go:2837
+	C:/Go/src/net/http/server.go:1925
+	C:/Go/src/runtime/asm_amd64.s:1374
+[go-todo]2020/09/04 10:23:41 core.go:40: 1 条 YesOhh 的待办事宜已完成
+[go-todo]2020/09/04 10:24:07 core.go:30: YesOhh 新增 id 为 30 的待办事宜
+[go-todo]2020/09/04 10:24:29 core.go:30: YesOhh 新增 id 为 31 的待办事宜
+[go-todo]2020/09/04 10:25:01 core.go:30: YesOhh 新增 id 为 32 的待办事宜
+[go-todo]2020/09/04 10:25:26 core.go:30: YesOhh 新增 id 为 33 的待办事宜

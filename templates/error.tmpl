@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 此处的 . 就是传入引用的子模板的变量 -->
+    {{template "header" .}}
+</head>
+<body>
+{{template "nav"}}
+<main>
+    <div class="row justify-content-md-center">
+        <div class="card w-25 bg-light">
+            <img class="card-img-top img-fluid" src="/static/images/error.jpg">
+            <div class="card-body">
+                <h5 class="card-title">错误</h5>
+                <p class="card-text">{{.error}}</p>
+            </div>
+            <div class="card-footer">
+                <div class="float-right">
+                    <a class="btn btn-primary" href="/">&larr;主页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
