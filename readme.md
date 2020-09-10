@@ -23,4 +23,6 @@ GoToDo 待做清单
     
 * demo
 
-    ![demo demo](static/images/GoToDo.jpg)
+    ![demo demo](static/images/add.png)
+    
+    ![demo demo](static/images/finished.png)
