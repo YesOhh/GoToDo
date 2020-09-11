@@ -4,3 +4,11 @@ ip = ""
 port = ""
 # 存放日志的文件夹
 logDir = "log"
+
+[redis]
+# 默认不使用redis，配置为 true 后可以支持定时通知钉钉机器人等功能
+exists = false
+# 如果启用redis，默认redis运行在 localhost:6379，密码为 ""
+ip = ""
+port = ""
+password = ""

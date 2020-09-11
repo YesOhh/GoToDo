@@ -17,7 +17,7 @@ func init() {
 		log.Fatal(err.Error())
 	}
 	// 用户表
-	stmt, err := Db.Prepare("CREATE TABLE IF NOT EXISTS `"+ DbUserName +"` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(20) NOT NULL, `password_hash` VARCHAR(128) NOT NULL)")
+	stmt, err := Db.Prepare("CREATE TABLE IF NOT EXISTS `"+ DbUserName +"` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(20) NOT NULL, `password_hash` VARCHAR(128) NOT NULL, `webhook` VARCHAR(256))")
 	if err != nil {
 		log.Fatal(err.Error())
 	}
@@ -34,6 +34,7 @@ func init() {
 	if err != nil {
 		log.Fatal(err.Error())
 	}
+
 	// 最大连接数
 	Db.SetMaxOpenConns(20)
 	// 最大空闲连接数

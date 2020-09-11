@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 此处的 . 就是传入引用的子模板的变量 -->
+    {{template "header" .}}
+</head>
+<body>
+{{template "nav" .}}
+<main>
+    <div class="row">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-dingding-tab" data-toggle="pill" href="#v-pills-dingding" role="tab" aria-controls="v-pills-dingding" aria-selected="true">钉钉机器人设置</a>
+{{/*            <a class="nav-link" id="v-pills-password-tab" data-toggle="pill" href="#v-pills-password" role="tab" aria-controls="v-pills-profile" aria-selected="false">密码设置</a>*/}}
+        </div>
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-dingding" role="tabpanel" aria-labelledby="v-pills-dingding-tab">
+                <form action="/setting/webhook" method="post">
+                    <div class="form-group row">
+                        <label for="currentWebHook" class="col-sm-2 col-form-label">当前 webhook</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="currentWebHook" value={{.currentWebhook}}}>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputWebHook" class="col-sm-2 col-form-label">新的 webhook</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputWebHook" placeholder="https://oapi.dingtalk.com/robot/send?access_token=xxxxxxx" required>
+                        </div>
+                    </div>
+                    <input class="float-right btn btn-secondary" name="submit" type="submit" value="确定">
+                </form>
+            </div>
+{{/*            <div class="tab-pane fade" id="v-pills-password" role="tabpanel" aria-labelledby="v-pills-password-tab">...</div>*/}}
+        </div>
+    </div>
+    <div class="container mt-5">
+        <hr>
+        {{template "footer"}}
+    </div>
+</main>
+</body>
+</html>

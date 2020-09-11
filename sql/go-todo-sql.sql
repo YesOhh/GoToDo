@@ -1,7 +1,8 @@
 CREATE TABLE IF NOT EXISTS user(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username VARCHAR(20) NOT NULL,
-    password_hash VARCHAR(128) NOT NULL
+    password_hash VARCHAR(128) NOT NULL,
+    webhook VARCHAR(256)
 );
 
 CREATE TABLE IF NOT EXISTS message(

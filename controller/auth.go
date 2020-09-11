@@ -120,3 +120,11 @@ func Logout(c *gin.Context) {
 		c.Redirect(http.StatusMovedPermanently, "/login")
 	}
 }
+
+func UpdateWebhook(c *gin.Context) {
+	session := sessions.Default(c)
+	username := session.Get("username")
+	webhook := c.PostForm("webhook")
+	_ = model.UpdateWebHook(username.(string), webhook)
+	// 此处需要返回当前页面
+}

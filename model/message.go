@@ -1,9 +1,13 @@
 package model
 
 import (
+	"bytes"
 	"database/sql"
+	"encoding/json"
+	"errors"
 	"goTodo/initialization"
 	"goTodo/mylog"
+	"net/http"
 	"strings"
 	"time"
 )
@@ -83,7 +87,7 @@ func FinishMessage(username string, idList []string) int64 {
 	curSql += inSql + ")"
 	stmt, err := initialization.Db.Prepare(curSql)
 	if err != nil {
-		mylog.GoTodoLogger.Panicln("准备标价完成事宜出错:", err)
+		mylog.GoTodoLogger.Panicln("准备标记完成事宜出错:", err)
 	}
 	res, err := stmt.Exec(time.Now().Unix(), username)
 	if err != nil {
@@ -94,6 +98,78 @@ func FinishMessage(username string, idList []string) int64 {
 		mylog.GoTodoLogger.Panicln("标记完成事宜出错:", err)
 	}
 	return affect
+}
+
+type Contents struct {
+	Msgtype string `json:"msgtype"`
+	Text ContentText `json:"text"`
+	At ContentAt `json:"at"`
+}
+
+type ContentText struct {
+	Content string `json:"content"`
+}
+
+type ContentAt struct {
+	IsAtAll bool `json:"isAtAll"`
+}
+
+func NoticeMessage(username string, idList []string) error {
+	var webhook string
+	err := initialization.Db.QueryRow("SELECT webhook FROM " + initialization.DbUserName + " WHERE username = ?", username).Scan(&webhook)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			mylog.GoTodoLogger.Println("查询webhook时，要查询的用户:" + username + "不存在")
+			return errors.New("查询webhook时，要查询的用户:" + username + "不存在")
+		}
+		mylog.GoTodoLogger.Println("查询数据库webhook出错:", err)
+		return err
+	}
+	if webhook == "" {
+		mylog.GoTodoLogger.Println(username + "的钉钉机器人还未设置")
+		return errors.New(username + "的钉钉机器人还未设置")
+	}
+
+	inSql := strings.Join(idList, ",")
+	curSql := "SELECT message FROM " + initialization.DbMessageName + " WHERE username = ? AND id IN (" + inSql + ")"
+	rows, err := initialization.Db.Query(curSql, username)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			mylog.GoTodoLogger.Println(username + "指定推送的信息不存在")
+			return errors.New(username + "指定推送的信息不存在")
+		}
+		mylog.GoTodoLogger.Println("查询数据库webhook出错:", err)
+		return err
+	}
+	var messageList []string
+	for rows.Next() {
+		var message string
+		err = rows.Scan(&message)
+		if err == sql.ErrNoRows {
+			continue
+		}
+		messageList = append(messageList, message)
+	}
+	c := &Contents{Msgtype: "text", Text: ContentText{Content: "[待办提醒]" + "\n" + strings.Join(messageList, "\n")}, At: ContentAt{IsAtAll: true}}
+	data, err := json.Marshal(c)
+	if err != nil {
+		mylog.GoTodoLogger.Println(username + "需要推送的信息转化为json出错", err)
+		return err
+	}
+	req, err := http.NewRequest("POST", webhook, bytes.NewReader(data))
+	if err != nil {
+		mylog.GoTodoLogger.Println(username + "需要推送的信息构造request请求出错", err)
+		return err
+	}
+	req.Header.Set("Content-Type", "application/json;charset=utf-8")
+	client := http.Client{}
+	resp, err := client.Do(req)
+	if err != nil {
+		mylog.GoTodoLogger.Println(username + "需要推送的信息推送出错", err)
+		return err
+	}
+	defer resp.Body.Close()
+	return nil
 }
 
 type FinishedInfo struct {

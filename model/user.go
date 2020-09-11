@@ -54,3 +54,15 @@ func (user *UserModel) ExistUser() bool {
 	}
 	return true
 }
+
+func UpdateWebHook(username, webhook string) int64 {
+	res, err := initialization.Db.Exec("UPDATE " + initialization.DbUserName + " SET webhook = ? WHERE username = ? ", webhook, username)
+	if err != nil {
+		mylog.GoTodoLogger.Panicln(username + "添加webhook出错", err)
+	}
+	id, err := res.LastInsertId()
+	if err != nil {
+		mylog.GoTodoLogger.Panicln(username + "添加webhook出错", err)
+	}
+	return id
+}
