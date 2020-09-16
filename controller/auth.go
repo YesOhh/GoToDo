@@ -115,8 +115,8 @@ func Logout(c *gin.Context) {
 		session.Clear()
 		_ = session.Save()
 		mylog.GoTodoLogger.Printf("%s log out, current authenticated: %s", username, session.Get("status"))
-		c.Redirect(http.StatusMovedPermanently, "/login")
+		c.Redirect(http.StatusFound, "/login")
 	} else {
-		c.Redirect(http.StatusMovedPermanently, "/login")
+		c.Redirect(http.StatusFound, "/login")
 	}
 }

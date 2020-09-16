@@ -36,9 +36,9 @@ func LoadRouters(r *gin.Engine)  {
 	operation.POST("/operate", Operate)
 	operation.GET("/clear", Clear)
 
-	setting := r.Group("/setting")
-	setting.GET("/", ShowSettings)
-	setting.POST("/", UpdateWebhook)
+	//setting := r.Group("/setting")
+	r.GET("/setting", ShowSettings)
+	r.POST("/setting", UpdateWebhook)
 
 	r.NoRoute(func(c *gin.Context) {
 		c.HTML(http.StatusNotFound, "error.tmpl", gin.H{
