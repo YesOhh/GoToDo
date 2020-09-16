@@ -24,6 +24,8 @@ func NewFlash(tag, message string) *Flash {
 type Message struct {
 	Id int
 	Message string
+	NotifyTime string
+	HasNotified bool
 }
 
 type TotalList struct {
@@ -33,38 +35,36 @@ type TotalList struct {
 }
 
 func (t *TotalList) Search(username string) {
-	rows, err := initialization.Db.Query("SELECT id, message FROM " + initialization.DbMessageName + " WHERE username = ? AND finished_time IS NULL ORDER BY create_time DESC", username)
+	currentTime := time.Now().Unix()
+	rows, err := initialization.Db.Query("SELECT id, message, notify_time FROM " + initialization.DbMessageName + " WHERE username = ? AND finished_time IS NULL ORDER BY create_time DESC", username)
 	if err != nil {
 		if err == sql.ErrNoRows {
 			return
 		}
 		mylog.GoTodoLogger.Panicln("查询数据库待办事宜出错：", err)
 	}
+	defer rows.Close()
 	for rows.Next() {
 		var id int
 		var message string
-		err = rows.Scan(&id, &message)
+		var notifyTime sql.NullInt64
+		err = rows.Scan(&id, &message, &notifyTime)
 		if err == sql.ErrNoRows {
 			return
 		}
-		t.MessageList = append(t.MessageList, Message{Id: id, Message: message})
-	}
+		// 只有在有通知时间，并且通知时间大于当前时间，即还没有进行通知的时候，才会把将要通知的时间显现出来，否则显示已通知
+		if notifyTime.Valid {
+			if notifyTime.Int64 > currentTime {
+				t.MessageList = append(t.MessageList, Message{Id: id, Message: message, NotifyTime: time.Unix(notifyTime.Int64, 0).Format("2006/01/02 15:04:05"), HasNotified: false})
+			} else {
+				t.MessageList = append(t.MessageList, Message{Id: id, Message: message, NotifyTime: "-1", HasNotified: true})
+			}
 
-	//rows, err = initialization.Db.Query("SELECT message FROM " + initialization.DbMessageName + " WHERE username = ? AND finished_time IS NOT NULL ORDER BY finished_time DESC LIMIT 7", username)
-	//if err != nil {
-	//	if err == sql.ErrNoRows {
-	//		return
-	//	}
-	//	mylog.GoTodoLogger.Panicln("查询数据库完成事宜出错：", err)
-	//}
-	//for rows.Next() {
-	//	var message string
-	//	err = rows.Scan(&message)
-	//	if err == sql.ErrNoRows {
-	//		return
-	//	}
-	//	t.Finished = append(t.Finished, message)
-	//}
+		} else {
+			t.MessageList = append(t.MessageList, Message{Id: id, Message: message, NotifyTime: "", HasNotified: false})
+		}
+
+	}
 
 	t.PartFinishedInfo.Query(username, 0, 5)
 }
@@ -100,6 +100,28 @@ func FinishMessage(username string, idList []string) int64 {
 	return affect
 }
 
+func UpdateMessageNotifyTime(username string, idList []string, settingTime time.Time) int64 {
+	inSql := strings.Join(idList, ",")
+	curSql := "UPDATE " + initialization.DbMessageName + " SET notify_time = ? WHERE username = ? AND id IN ("
+	curSql += inSql + ")"
+	stmt, err := initialization.Db.Prepare(curSql)
+	if err != nil {
+		mylog.GoTodoLogger.Printf("准备更新推送时间出错: %s", err)
+		return -1
+	}
+	res, err := stmt.Exec(settingTime.Unix(), username)
+	if err != nil {
+		mylog.GoTodoLogger.Printf("更新推送时间出错: %s", err)
+		return -1
+	}
+	affect, err := res.RowsAffected()
+	if err != nil {
+		mylog.GoTodoLogger.Printf("获取更新推送时间影响条数出错: %s", err)
+		return -1
+	}
+	return affect
+}
+
 type Contents struct {
 	Msgtype string `json:"msgtype"`
 	Text ContentText `json:"text"`
@@ -127,16 +149,18 @@ func NoticeMessage(username string, idList []string) error {
 	}
 	if webhook == "" {
 		mylog.GoTodoLogger.Println(username + "的钉钉机器人还未设置")
-		return errors.New(username + "的钉钉机器人还未设置")
+		return errors.New("myError:钉钉机器人还未设置，请先设置")
 	}
 
 	inSql := strings.Join(idList, ",")
+	// 保证id是对应的username的，以免不匹配导致使用了别人的信息
 	curSql := "SELECT message FROM " + initialization.DbMessageName + " WHERE username = ? AND id IN (" + inSql + ")"
 	rows, err := initialization.Db.Query(curSql, username)
+	defer rows.Close()
 	if err != nil {
 		if err == sql.ErrNoRows {
 			mylog.GoTodoLogger.Println(username + "指定推送的信息不存在")
-			return errors.New(username + "指定推送的信息不存在")
+			return errors.New("myError:指定推送的信息不存在")
 		}
 		mylog.GoTodoLogger.Println("查询数据库webhook出错:", err)
 		return err
@@ -172,6 +196,58 @@ func NoticeMessage(username string, idList []string) error {
 	return nil
 }
 
+const SplitSym = ":"
+
+func RedisSubscribe() {
+	client := initialization.Client
+	sub := client.Subscribe("__keyevent@0__:expired")
+	for msg:= range sub.Channel() {
+		payload := msg.Payload
+		nameId := strings.Split(payload, SplitSym)
+		name, id := nameId[0], nameId[1]
+		err := NoticeMessage(name, []string{id})
+		if err != nil {
+			mylog.GoTodoLogger.Printf("%s 的 %s 任务推送失败：%s", name, id, err)
+		}
+	}
+}
+
+func RedisPrepareNotify(username string, idList []string, settingTime time.Time) {
+	// redis存储
+	client := initialization.Client
+	for _, v := range idList {
+		key := username + SplitSym + v
+		client.Set(key, "0", 0)
+		client.ExpireAt(key, settingTime)
+	}
+	// 数据库存储，存在数据库是为了能在页面上显示，方便更改
+	_ = UpdateMessageNotifyTime(username, idList, settingTime)
+}
+
+
+func CancelNotify(username, id string) error {
+	// 先取消redis里的过期时间，然后将数据库内的 notify_time 修改
+	client := initialization.Client
+	key := username + SplitSym + id
+	client.Del(key)
+
+	curSql := "UPDATE " + initialization.DbMessageName + " SET notify_time = NULL WHERE username = ? AND id = ?"
+	stmt, err := initialization.Db.Prepare(curSql)
+	if err != nil {
+		mylog.GoTodoLogger.Printf("准备取消推送出错: %s", err)
+		return errors.New("myError:已正常取消推送，服务器内部错误导致无法取消显示消息上的详情，请勿担心")
+	}
+	_, err = stmt.Exec(username, id)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil
+		}
+		mylog.GoTodoLogger.Printf("取消推送出错: %s", err)
+		return errors.New("myError:已正常取消推送，服务器内部错误导致无法取消显示消息上的详情，请勿担心")
+	}
+	return nil
+}
+
 type FinishedInfo struct {
 	Message string
 	CreateTime string
@@ -182,6 +258,7 @@ type TotalFinishedInfo []FinishedInfo
 
 func (t *TotalFinishedInfo) Query(username string, start, limit int) {
 	rows, err := initialization.Db.Query("SELECT message, create_time, finished_time FROM " + initialization.DbMessageName + " WHERE username = ? AND finished_time IS NOT NULL ORDER BY finished_time DESC LIMIT ?, ?", username, start, limit)
+	defer rows.Close()
 	if err != nil {
 		if err == sql.ErrNoRows {
 			return

@@ -7,7 +7,7 @@ import (
 
 type configuration struct {
 	Setting setting
-	RedisSetting redis
+	RedisSetting redisSetting
 }
 
 type setting struct {
@@ -16,11 +16,12 @@ type setting struct {
 	LogDir string
 }
 
-type redis struct {
+type redisSetting struct {
 	Exists bool
 	Ip string
 	Port string
 	Password string
+	Db int
 }
 
 var Configuration configuration

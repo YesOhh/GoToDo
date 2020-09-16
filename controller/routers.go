@@ -4,7 +4,9 @@ import (
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
+	"goTodo/initialization"
 	"goTodo/middleware"
+	"goTodo/model"
 	"net/http"
 )
 
@@ -28,14 +30,24 @@ func LoadRouters(r *gin.Engine)  {
 	r.GET("/", index)
 	r.GET("/finished", Finished)
 	r.POST("/finished", Finished)
-	v := r.Group("/operation")
-	v.POST("/add", Add)
-	v.POST("/finish", Finish)
-	v.GET("/clear", Clear)
+
+	operation := r.Group("/operation")
+	operation.POST("/add", Add)
+	operation.POST("/operate", Operate)
+	operation.GET("/clear", Clear)
+
+	setting := r.Group("/setting")
+	setting.GET("/", ShowSettings)
+	setting.POST("/", UpdateWebhook)
+
 	r.NoRoute(func(c *gin.Context) {
 		c.HTML(http.StatusNotFound, "error.tmpl", gin.H{
 			"title": "发生错误",
 			"error": "未找到该页面",
 		})
 	})
+
+	if initialization.Configuration.RedisSetting.Exists {
+		go model.RedisSubscribe()
+	}
 }

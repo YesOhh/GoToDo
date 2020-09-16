@@ -55,14 +55,29 @@ func (user *UserModel) ExistUser() bool {
 	return true
 }
 
-func UpdateWebHook(username, webhook string) int64 {
+// 用来查用户设置，目前只查 webhook
+type UserSetting struct {
+	// 用byte，如果是null，转成string则为空字符串
+	CurrentWebHook []byte
+}
+
+func ShowSettings(username string) *UserSetting {
+	row := initialization.Db.QueryRow("SELECT webhook FROM " + initialization.DbUserName + " WHERE username = ?", username)
+	userSetting := new(UserSetting)
+	if err := row.Scan(&userSetting.CurrentWebHook); err != nil {
+		mylog.GoTodoLogger.Panicln("查询用户设置发生错误:", err)
+	}
+	return userSetting
+}
+
+func UpdateWebHook(username, webhook string) string {
 	res, err := initialization.Db.Exec("UPDATE " + initialization.DbUserName + " SET webhook = ? WHERE username = ? ", webhook, username)
 	if err != nil {
 		mylog.GoTodoLogger.Panicln(username + "添加webhook出错", err)
 	}
-	id, err := res.LastInsertId()
+	_, err = res.LastInsertId()
 	if err != nil {
 		mylog.GoTodoLogger.Panicln(username + "添加webhook出错", err)
 	}
-	return id
+	return webhook
 }

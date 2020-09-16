@@ -35,6 +35,16 @@ func init() {
 		log.Fatal(err.Error())
 	}
 
+	// 创建索引
+	stmt, err = Db.Prepare("CREATE INDEX IF NOT EXISTS idx_username ON `"+ DbMessageName +"`(username)")
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+	_, err = stmt.Exec()
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+
 	// 最大连接数
 	Db.SetMaxOpenConns(20)
 	// 最大空闲连接数

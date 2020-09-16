@@ -7,9 +7,9 @@
 <body>
 {{template "nav" .}}
 <main>
+    {{template "flash" .}}
     {{template "add"}}
-
-    <form action="/operation/finish" method="post">
+    <form action="/operation/operate" method="post">
         <div class="container">
             <div class="row mt-3">
                 <div class="col-md-10">
@@ -22,7 +22,54 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2">
+                {{if .canNotify}}
+                <div class="col-sm-1">
+                    <input type="button" class="btn btn-secondary" data-toggle="modal" data-target="#settingNotify" value="通知">
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="settingNotify" tabindex="-1" role="dialog" aria-labelledby="settingNotifyTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="settingNotifyTitle">提醒时间选择</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    请确认已经勾选需要设置通知的消息
+                                    <ul>
+                                        <li>没有设定日期</li>
+                                        <li>设定的日期时间早于当前时间</li>
+                                        <hr>
+                                        以上两种情况会立刻进行通知
+                                    </ul>
+
+                                    <div class="input-group my-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">日期</div>
+                                        </div>
+                                        <input type="text" name="notifyDate" class="form-control" placeholder="请选择日期" id="laydate-choose-date">
+                                    </div>
+                                    <div class="input-group my-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">时间</div>
+                                        </div>
+                                        <input type="text" name="notifyTime" class="form-control" placeholder="请选择时间" id="laydate-choose-time">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                                    <input class="float-right btn btn-primary" name="notify" type="submit" value="提交">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{else}}
+                    <div class="col-md-1"></div>
+                {{end}}
+                <div class="col-md-1">
                     <input class="float-right btn btn-secondary" name="submit" type="submit" value="完成">
                 </div>
             </div>
@@ -32,7 +79,37 @@
                         <div class="tab-pane fade show active" id="todo" role="tabpanel" aria-labelledby="todo-tab">
                             {{range .messageList}}
                                 <label class="card-body shadow container-fluid my-2">
-                                    <strong class="card-text"><input type="checkbox" autocomplete="off" aria-label="checkbox" value={{.Id}} name="todo">  {{.Message}}</strong>
+                                    <a class="card-text">
+                                        <input type="checkbox" autocomplete="off" aria-label="checkbox" value={{.Id}} name="todo"><strong>  {{.Message}}</strong>
+                                        {{if .NotifyTime}}
+                                            {{if .HasNotified}}
+                                                <span class="badge badge-light float-right">已通知</span>
+                                            {{else}}
+                                            <input type="button" class="btn-sm btn-secondary float-right" data-toggle="modal" data-target="#collapse{{.Id}}" value="详情">
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="collapse{{.Id}}" tabindex="-1" role="dialog" aria-labelledby="notifyDetail" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="notifyDetail">通知详情</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            此消息已设定于{{.NotifyTime}}进行推送通知
+                                                        </div>
+                                                        <div class="modal-footer justify-content-between">
+                                                            <button type="submit" class="btn btn-danger" name="delNotify" value={{.Id}}>取消通知</button>
+                                                            <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {{end}}
+                                        {{end}}
+                                    </a>
                                 </label>
                             {{else}}
                                 <h4>没有待办事情噢</h4>
